@@ -1,9 +1,12 @@
+require('dotenv').config();
+
 const TelegramApi = require('node-telegram-bot-api');
 const { gameOptions, againOptions } = require('./options');
+
+const token = process.env.TELEGRAM_BOT_TOKEN;
+
 // const sequelize = require('./db');
 // const UserModel = require('./models');
-
-const token = '8288459743:AAHbu7oB5UyXyuPnVn1UseARqvV3RRu51EE';
 
 const bot = new TelegramApi(token, { polling: true });
 
